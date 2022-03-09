@@ -3,7 +3,7 @@
 
 int main(int argc, char** argv)
 {
-    sf::Window Window(sf::VideoMode(800, 600), L"测试");
+    sf::Window Window(sf::VideoMode(800, 600), L"test");
     while (Window.isOpen())
     {
         // check all the window's events that were triggered since the last iteration of the loop

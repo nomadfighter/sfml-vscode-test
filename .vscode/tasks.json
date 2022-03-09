@@ -3,13 +3,38 @@
 	"tasks": [
 		{
 			"type": "cppbuild",
-			"label": "C/C++: clang++ 生成活动文件",
+			"label": "macOS",
 			"command": "/usr/bin/clang++",
 			"args": [
 				"-fdiagnostics-color=always",
 				"-g",
 				"${file}",
 				"-L/usr/local/lib",
+				"-lsfml-graphics",
+                "-lsfml-window",
+                "-lsfml-system",
+				"-o",
+				"${fileDirname}/output/${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "编译器: /usr/bin/clang++"
+		},
+		{
+			"type": "cppbuild",
+			"label": "Win64",
+			"command": "C:\\msys64\\mingw64\\bin\\clang++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-IC:\\msys64\\clang64\\include",
+				"-LC:\\msys64\\clang64\\lib",
 				"-lsfml-graphics",
                 "-lsfml-window",
                 "-lsfml-system",
